@@ -1,0 +1,78 @@
+2015-12-05 18:09:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assignment3 could not be found.
+Exception Attributes: array (
+  'class' => 'Assignment3',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /Assignment3/assignment3/
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-12-05 18:09:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assignment3 could not be found.
+Exception Attributes: array (
+  'class' => 'Assignment3',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /Assignment3/assignment3/articles
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-12-05 18:09:52 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Articles could not be found.
+Exception Attributes: array (
+  'class' => 'Articles',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /Assignment3/articles
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-12-05 18:19:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Users could not be found.
+Exception Attributes: array (
+  'class' => 'Users',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /Assignment3/users/view/1
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-12-05 18:19:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Users could not be found.
+Exception Attributes: array (
+  'class' => 'Users',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /Assignment3/users/view/2
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-12-05 20:12:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Comments could not be found.
+Exception Attributes: array (
+  'class' => 'Comments',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /Assignment3/comments
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
