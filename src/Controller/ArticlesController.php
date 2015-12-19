@@ -21,7 +21,7 @@ class ArticlesController extends AppController
         $this->paginate = [
             'contain' => ['Users']
         ];
-        $this->set('articles', $this->paginate($this->find('all')));
+        $this->set('articles', $this->paginate($this->Articles));
         $this->set('_serialize', ['articles']);
     }
 
@@ -35,7 +35,7 @@ class ArticlesController extends AppController
     public function view($id = null)
     {
         $article = $this->Articles->get($id, [
-            'contain' => ['Users', 'Comments']
+            'contain' => ['Users', 'ArticleTagRelation', 'Comments']
         ]);
         $this->set('article', $article);
         $this->set('_serialize', ['article']);

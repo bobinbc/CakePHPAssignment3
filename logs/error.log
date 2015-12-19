@@ -76,3 +76,93 @@ Stack Trace:
 #1 {main}
 
 
+2015-12-08 00:49:44 Error: Fatal Error (1): Call to undefined method App\Controller\ArticlesController::find() in [C:\xampp\htdocs\Assignment3\src\Controller\ArticlesController.php, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2015-12-08 00:49:46 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\ArticlesController::find()
+Request URL: /Assignment3/Articles
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-12-18 23:02:59 Error: Fatal Error (1): Call to undefined method App\Controller\ArticlesController::find() in [C:\xampp\htdocs\Assignment3\src\Controller\ArticlesController.php, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2015-12-18 23:02:59 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\ArticlesController::find()
+Request URL: /Assignment3/Articles
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-12-18 23:03:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Blog could not be found.
+Exception Attributes: array (
+  'class' => 'Blog',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /Assignment3/Blog
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-12-18 23:03:06 Error: Fatal Error (1): Call to undefined method App\Controller\ArticlesController::find() in [C:\xampp\htdocs\Assignment3\src\Controller\ArticlesController.php, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2015-12-18 23:03:06 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\ArticlesController::find()
+Request URL: /Assignment3/Articles
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-12-18 23:03:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Article could not be found.
+Exception Attributes: array (
+  'class' => 'Article',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /Assignment3/Article
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-12-18 23:03:27 Error: Fatal Error (1): Call to undefined method App\Controller\ArticlesController::find() in [C:\xampp\htdocs\Assignment3\src\Controller\ArticlesController.php, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 209
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 92
+[main] - [internal], line ??
+
+
+
+2015-12-18 23:03:27 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\ArticlesController::find()
+Request URL: /Assignment3/Articles
+Stack Trace:
+#0 C:\xampp\htdocs\Assignment3\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(92): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

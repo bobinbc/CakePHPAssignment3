@@ -1,20 +1,18 @@
 <?php
 namespace App\Model\Table;
 
-use App\Model\Entity\Article;
+use App\Model\Entity\Comment;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Articles Model
+ * Comments Model
  *
- * @property \Cake\ORM\Association\BelongsTo $Users
- * @property \Cake\ORM\Association\HasMany $ArticleTagRelation
- * @property \Cake\ORM\Association\HasMany $Comments
+ * @property \Cake\ORM\Association\BelongsTo $Articles
  */
-class ArticlesTable extends Table
+class CommentsTable extends Table
 {
 
     /**
@@ -27,21 +25,15 @@ class ArticlesTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('articles');
-        $this->displayField('title');
+        $this->table('comments');
+        $this->displayField('id');
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Users', [
-            'foreignKey' => 'user_id',
+        $this->belongsTo('Articles', [
+            'foreignKey' => 'article_id',
             'joinType' => 'INNER'
-        ]);
-        $this->hasMany('ArticleTagRelation', [
-            'foreignKey' => 'article_id'
-        ]);
-        $this->hasMany('Comments', [
-            'foreignKey' => 'article_id'
         ]);
     }
 
@@ -58,12 +50,13 @@ class ArticlesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
+            ->requirePresence('comment', 'create')
+            ->notEmpty('comment');
 
         $validator
-            ->requirePresence('body', 'create')
-            ->notEmpty('body');
+            ->add('isApproved', 'valid', ['rule' => 'boolean'])
+            ->requirePresence('isApproved', 'create')
+            ->notEmpty('isApproved');
 
         return $validator;
     }
@@ -77,7 +70,7 @@ class ArticlesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['user_id'], 'Users'));
+        $rules->add($rules->existsIn(['article_id'], 'Articles'));
         return $rules;
     }
 }

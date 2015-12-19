@@ -1,20 +1,18 @@
 <?php
 namespace App\Model\Table;
 
-use App\Model\Entity\Article;
+use App\Model\Entity\User;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Articles Model
+ * Users Model
  *
- * @property \Cake\ORM\Association\BelongsTo $Users
- * @property \Cake\ORM\Association\HasMany $ArticleTagRelation
- * @property \Cake\ORM\Association\HasMany $Comments
+ * @property \Cake\ORM\Association\HasMany $Articles
  */
-class ArticlesTable extends Table
+class UsersTable extends Table
 {
 
     /**
@@ -27,21 +25,14 @@ class ArticlesTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('articles');
-        $this->displayField('title');
+        $this->table('users');
+        $this->displayField('id');
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Users', [
-            'foreignKey' => 'user_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->hasMany('ArticleTagRelation', [
-            'foreignKey' => 'article_id'
-        ]);
-        $this->hasMany('Comments', [
-            'foreignKey' => 'article_id'
+        $this->hasMany('Articles', [
+            'foreignKey' => 'user_id'
         ]);
     }
 
@@ -58,12 +49,13 @@ class ArticlesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
+            ->allowEmpty('username');
 
         $validator
-            ->requirePresence('body', 'create')
-            ->notEmpty('body');
+            ->allowEmpty('password');
+
+        $validator
+            ->allowEmpty('role');
 
         return $validator;
     }
@@ -77,7 +69,7 @@ class ArticlesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['user_id'], 'Users'));
+        $rules->add($rules->isUnique(['username']));
         return $rules;
     }
 }

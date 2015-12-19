@@ -1,14 +1,14 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\ArticlesTable;
+use App\Model\Table\TagsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\ArticlesTable Test Case
+ * App\Model\Table\TagsTable Test Case
  */
-class ArticlesTableTest extends TestCase
+class TagsTableTest extends TestCase
 {
 
     /**
@@ -17,10 +17,8 @@ class ArticlesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.articles',
-        'app.users',
-        'app.article_tag_relation',
-        'app.comments'
+        'app.tags',
+        'app.article_tag_relation'
     ];
 
     /**
@@ -31,8 +29,8 @@ class ArticlesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Articles') ? [] : ['className' => 'App\Model\Table\ArticlesTable'];
-        $this->Articles = TableRegistry::get('Articles', $config);
+        $config = TableRegistry::exists('Tags') ? [] : ['className' => 'App\Model\Table\TagsTable'];
+        $this->Tags = TableRegistry::get('Tags', $config);
     }
 
     /**
@@ -42,7 +40,7 @@ class ArticlesTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Articles);
+        unset($this->Tags);
 
         parent::tearDown();
     }
@@ -63,16 +61,6 @@ class ArticlesTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

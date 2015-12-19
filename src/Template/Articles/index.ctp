@@ -4,6 +4,8 @@
         <li><?= $this->Html->link(__('New Article'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Article Tag Relation'), ['controller' => 'ArticleTagRelation', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Article Tag Relation'), ['controller' => 'ArticleTagRelation', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Comments'), ['controller' => 'Comments', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Comment'), ['controller' => 'Comments', 'action' => 'add']) ?></li>
     </ul>
@@ -15,6 +17,7 @@
             <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
                 <th><?= $this->Paginator->sort('title') ?></th>
+                <th><?= $this->Paginator->sort('body') ?></th>
                 <th><?= $this->Paginator->sort('created') ?></th>
                 <th><?= $this->Paginator->sort('modified') ?></th>
                 <th><?= $this->Paginator->sort('user_id') ?></th>
@@ -26,6 +29,7 @@
             <tr>
                 <td><?= $this->Number->format($article->id) ?></td>
                 <td><?= h($article->title) ?></td>
+                <td><?= h($article->body) ?></td>
                 <td><?= h($article->created) ?></td>
                 <td><?= h($article->modified) ?></td>
                 <td><?= $article->has('user') ? $this->Html->link($article->user->id, ['controller' => 'Users', 'action' => 'view', $article->user->id]) : '' ?></td>
